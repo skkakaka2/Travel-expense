@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: expense-service
+  profiles:
+    active: ${TRAVEL_PROFILES_ACTIVE:dev}
+  config:
+    import: "nacos:${spring.application.name}-${spring.profiles.active}.yaml?group=DEFAULT_GROUP&refreshEnabled=true"
+  cloud:
+    nacos:
+      server-addr: pi.home:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev
+        group: DEFAULT_GROUP
+      config:
+        namespace: dev
+        group: DEFAULT_GROUP
