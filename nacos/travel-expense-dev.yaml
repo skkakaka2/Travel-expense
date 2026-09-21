@@ -42,8 +42,3 @@ zy:
     group-display-name: 费用服务 API
     description: 家庭自驾游规划服务的费用微服务接口文档
     version: 1.0.0
-  security:
-    jwt:
-      secret: ${ZY_SECURITY_JWT_SECRET}
-      issuer: expense-service
-      expiration: 2h
