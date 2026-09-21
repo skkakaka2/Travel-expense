@@ -1,6 +1,6 @@
 spring:
   application:
-    name: expense-service
+    name: travel-expense
   profiles:
     active: ${TRAVEL_PROFILES_ACTIVE:dev}
   config:
